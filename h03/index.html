@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Arrays</title>
+<style>
+    html {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+    body {
+        text-align: center;
+    }
+    img {
+        height: 300px;
+        width: 300px;
+        border: 0px;
+    }
+    #pics {
+        margin: auto;
+        width: 900px;
+        height: 900px;
+        border: solid 1px black;
+        font-size: 0;
+    }
+</style>
 </head>
 <body>
+<h1>Monkey Shuffle</h1>
+<div id="pics">
+    <img src="img/aap1.jpg">
+    <img src="img/aap2.jpg">
+    <img src="img/aap3.jpg">
+    <img src="img/aap4.jpg">
+    <img src="img/aap5.jpg">
+    <img src="img/aap6.jpg">
+    <img src="img/aap7.jpg">
+    <img src="img/aap8.jpg">
+    <img src="img/aap9.jpg">
+</div>
+<script>
+    var plaatjes = document.getElementsByTagName("img");
+    var random = 0;
 
+    var randomNumbers = [];
+
+    while (randomNumbers.length < 9) {
+        random = Math.floor(Math.random() * 9) + 1;
+        if (randomNumbers.lastIndexOf(random) == -1) {
+            randomNumbers.push(random);
+        }
+    }
+    random = 0;
+    for (var plaatje in plaatjes) {
+        plaatjes[plaatje].src="img/aap" + randomNumbers[random] + ".jpg"
+        random++;
+
+    }
+</script>
 </body>
 </html>
