@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    html, body {
+        background-color: #c2c2d6;
+    }
+    .flex-container {
+        background-color: #66ffff;
+        border: 3px solid black;
+        height: 80vh;
+    }
+    .flex-container > div {
+        border: 2px dashed black;
+        width: 250px;
+    }
+    .flex-container > div {
+        border: 2px dashed black;
+    }
+    .flex-container > div:nth-child(4n) {
+        background-color: orange;
+    }
+    .flex-container > div:nth-child(4n+1) {
+        background-color: cadetblue;
+    }
+    .flex-container > div:nth-child(4n+2) {
+        background: forestgreen;
+    }
+    .flex-container > div:nth-child(4n+3) {
+        background: darkred;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: stretch;
+        flex-wrap: wrap-reverse;
+        align-content: normal;
+        text-align: center;
+
+    }
+    .flex-container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+
+
+<div class="flex-container">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+    <div>I</div>
+    <div>J</div>
+</div>
+
+</body>
+</html>

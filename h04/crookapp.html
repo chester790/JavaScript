@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crook App</title>
+
+    <style>
+        #crookapp1 {
+            height: 500px;
+            width: 800px;
+            transition: 1s;
+        }
+        #crookapp2 {
+            height: 500px;
+            width: 800px;
+            margin-top: -200px;
+            transition: 1s;
+        }
+        #crookapp3 {
+            height: 500px;
+            width: 800px;
+            margin-top: -200px;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="crookapp1"></div>
+    <div id="crookapp2"></div>
+    <div id="crookapp3"></div>
+    <script>
+    var plaatjes= [1,2,3];
+    var teller = 0;
+    var slideholder = document.getElementById("crookapp1")
+    slideholder.style.backgroundImage = "url(img/oog1.png)"
+
+    slideholder.addEventListener("click", function () {
+        slideholder.style.backgroundImage = "url(img/oog" + getOog() + ".png)"
+    });
+
+    function getOog() {
+        if (teller >= plaatjes.length){
+            teller = 1;
+        } else {
+            teller ++;
+        }
+        console.log(teller);
+        return teller;
+    }
+
+    var plaatje= [1,2,3];
+    var teller2 = 0;
+    var slideholder2 = document.getElementById("crookapp2")
+    slideholder2.style.backgroundImage = "url(img/neus1.png)"
+
+    slideholder2.addEventListener("click", function () {
+        slideholder2.style.backgroundImage = "url(img/neus" + getNeus() + ".png)"
+    });
+
+    function getNeus() {
+        if (teller2 >= plaatje.length){
+            teller2 = 1;
+        } else {
+            teller2 ++;
+        }
+        console.log(teller2);
+        return teller2;
+    }
+
+    var plaatjes2= [1,2,3];
+    var teller3 = 0;
+    var slideholder3 = document.getElementById("crookapp3")
+    slideholder3.style.backgroundImage = "url(img/mond1.png)"
+
+    slideholder3.addEventListener("click", function () {
+        slideholder3.style.backgroundImage = "url(img/mond" + getMond() + ".png)"
+    });
+
+    function getMond() {
+        if (teller3 >= plaatjes2.length){
+            teller3 = 1;
+        } else {
+            teller3 ++;
+        }
+        console.log(teller3);
+        return teller3;
+    }
+</script>
+
+</body>
+</html>

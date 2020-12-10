@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functies</title>
+</head>
+<body>
+
+<script>
+    var mijnauto= {
+        kleur: "blauw",
+        merk: "ford",
+        snelheid: 0,
+
+        gasgeven: function () {
+            this.snelheid += 5
+            console.log(this.snelheid);
+        },
+        toeteren: function () {
+            console.log("toet!")
+        }
+    }
+
+    console.log(mijnauto.kleur);
+    mijnauto.gasgeven();
+    mijnauto.gasgeven();
+    mijnauto.gasgeven();
+    mijnauto.gasgeven();
+    mijnauto.gasgeven();
+    mijnauto.toeteren();
+</script>
+
+<h1>druk op CONTROL + SHIFT + I voor deze opdracht</h1>
+<a href="slider.html">Klik hier voor de volgende opdracht</a>
+
+</body>
+</html>

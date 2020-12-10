@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+    <style>
+    #slideholder {
+        height: 300px;
+        width: 300px;
+        border: 3px solid black;
+        margin: auto;
+        transition: 2s;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="slideholder"></div>
+    <script>
+        var plaatjes= [1,2,3,4,5,6,7,8,9];
+        var teller = 0;
+        var slideholder = doc ument.getElementById("slideholder")
+        slideholder.style.backgroundImage = "url(img/aap1.jpg)"
+
+        slideholder.addEventListener("click", function () {
+            slideholder.style.backgroundImage = "url(img/aap" + getAap() + ".jpg)"
+        });
+
+        function getAap() {
+            if (teller >= plaatjes.length){
+                teller = 1;
+            } else {
+                teller ++;
+            }
+            console.log(teller);
+            return teller;
+        }
+    </script>
+
+<a href="index.html">klik hier om opdracht terug te gaan.</a>
+
+</body>
+</html>
