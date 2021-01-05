@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoofdstuk 5</title>
+    <style>
+
+        body {
+            text-align: center;
+        }
+
+        div.picture-holder {
+            width: 300px;
+            height: 450px;
+            float: left;
+            border: solid 1px black;
+            box-sizing: border-box;
+        }
+
+        div.favoriet {
+            width: 300px;
+            height: 150px;
+            background-image: none;
+        }
+
+        #pics {
+            width: 900px;
+            height: 1350px;
+            border: solid 1px black;
+            font-size: 0;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Apen Instagram</h1>
+<h3>Instagram voor je favorite aap!</h3>
+<div id="pics"></div>
+
+<script>
+    pics = document.getElementById("pics")
+    createPicsHolders();
+    createAapImages();
+
+    function createPicsHolders () {
+        for (var i = 0; i < 9; i++) {
+            pictureHolder = document.createElement("div");
+            pictureHolder.className = "picture-holder";
+            pictureHolder.id = "picture-holder-" + i;
+            pics.appendChild(pictureHolder);
+        }
+    }
+
+    function createAapImages() {
+        pictureHolders = document.getElementsByClassName("picture-holder")
+        for (var i = 0; i < pictureHolders.length; i++){
+            favoriet = document.createElement("div");
+            favoriet.className = "favoriet";
+            favoriet.id = "favoriet_" + (i+1);
+            aapPlaatje = document.createElement("img");
+            aapPlaatje.src = "img/aap" + (i+1) + ".jpg";
+            aapPlaatje.id = (i+1);
+            aapPlaatje.addEventListener("click", function () {
+                maakFavoriet(this.id);
+            });
+            pictureHolders [i].appendChild(favoriet);
+            pictureHolders [i].appendChild(aapPlaatje);
+        }
+    }
+
+    function maakFavoriet(id) {
+        console.log("Ik ben je favoriet namelijk aap " + id);
+        notsofavoriet = document.getElementsByClassName("favoriet");
+
+        for (var i = 0; i < notsofavoriet.length; i++) {
+            notsofavoriet[i].style.backgroundImage = "none";
+        }
+
+        favoriet = document.getElementById("favoriet_" + id);
+        favoriet.style.backgroundImage = "url('img/heart.png')";
+    }
+</script>
+</body>
+</html>
