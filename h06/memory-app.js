@@ -1,0 +1,1 @@
+console.log("U heeft een transmation erin gedaan zodat de afbeelding langzaam erin komt")
