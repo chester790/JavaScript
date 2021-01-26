@@ -2,37 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Memory Game</title>
-    <link href="index.css" rel="stylesheet">
 
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <h1>Memory Game</h1>
 
-        <nav>
-        <a href="uitleg.html">Klik hier om de uitleg te krijgen van het spelletje</a>
-        </nav>
+<main>
+    <h1>Succes</h1>
+</main>
 
-        <div id="pics"></div>
+<section class="memory-game">
+    <div class="memory-card" data-framework="1">
+        <img class="front-face" src="img/kaartset1.png" alt="1" />
+        <img class="back-face" src="img/back.jpg" alt="achtergrond" />
+    </div>
+    <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="img/kaartset1.png" alt="Aurelia" />
+        <img class="back-face" src="img/back.jpg" alt="achtergrond" />
+    </div>
 
-        <div class="beurt">
-            <h2>Aan de beurt: </h2>
-        </div>
+    <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="img/kaartset2.png" alt="Vue" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="img/kaartset2.png" alt="Vue" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
 
-        <div class="roshni">
-            <h2>ROSHNI: </h2>
-        </div>
+    <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="img/kaartset3.png" alt="Angular" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="img/kaartset3.png" alt="Angular" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
 
-        <div class="aura">
-            <h2>AURA: </h2>
-        </div>
+    <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="img/kaartset4.png" alt="Ember" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="img/kaartset4.png" alt="Ember" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
 
-        <div id="playingfield"></div>
+    <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="img/kaartset5.png" alt="Backbone" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="img/kaartset5.png" alt="Backbone" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
 
-    </main>
+    <div class="memory-card" data-framework="react">
+        <img class="front-face" src="img/kaartset6.png" alt="React" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="react">
+        <img class="front-face" src="img/kaartset6.png" alt="React" />
+        <img class="back-face" src="img/back.jpg" alt="JS Badge" />
+    </div>
+</section>
 
-<script src="memory-app.js"></script>
-
+<script src="scripts.js"></script>
 </body>
 </html>
