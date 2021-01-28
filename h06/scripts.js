@@ -1,4 +1,4 @@
-console.log("U heeft een Transmission in de CSS gedaan, en die zorgt ervoor dat je een vertraging krijgt in je open van je kaart.")
+console.log("U heeft een animatie in de CSS gedaan, en die zorgt ervoor dat je een vertraging krijgt in je open van je kaart.")
 
 const cards = document.querySelectorAll('.memory-card');
 
